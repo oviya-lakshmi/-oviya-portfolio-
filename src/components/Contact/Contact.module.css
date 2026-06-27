@@ -1,0 +1,242 @@
+.contact{
+
+padding:110px 0;
+
+}
+
+.contact h2{
+
+text-align:center;
+font-size:3rem;
+font-weight:800;
+margin-bottom:18px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+margin:auto;
+text-align:center;
+color:#666;
+font-size:18px;
+line-height:1.7;
+margin-bottom:60px;
+
+}
+
+.container{
+
+display:grid;
+grid-template-columns:360px 1fr;
+gap:40px;
+align-items:start;
+
+}
+
+.info{
+
+background:#fff;
+padding:35px;
+border-radius:25px;
+box-shadow:0 20px 45px rgba(124,58,237,.08);
+border:1px solid rgba(124,58,237,.08);
+
+}
+
+.infoCard{
+
+display:flex;
+gap:18px;
+align-items:flex-start;
+margin-bottom:28px;
+
+}
+
+.icon{
+
+font-size:24px;
+color:#7c3aed;
+margin-top:5px;
+
+}
+
+.infoCard h4{
+
+margin-bottom:6px;
+font-size:18px;
+
+}
+
+.infoCard p,
+.infoCard a{
+
+text-decoration:none;
+color:#666;
+line-height:1.6;
+word-break:break-word;
+
+}
+
+.infoCard a:hover{
+
+color:#7c3aed;
+
+}
+
+.socials{
+
+display:flex;
+gap:18px;
+margin-top:35px;
+
+}
+
+.socials a{
+
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f3ecff;
+border-radius:50%;
+color:#7c3aed;
+font-size:22px;
+transition:.35s;
+
+}
+
+.socials a:hover{
+
+background:#7c3aed;
+color:white;
+transform:translateY(-5px);
+
+}
+
+.form{
+
+background:#fff;
+padding:40px;
+border-radius:25px;
+box-shadow:0 20px 45px rgba(124,58,237,.08);
+border:1px solid rgba(124,58,237,.08);
+
+display:flex;
+flex-direction:column;
+gap:22px;
+
+}
+
+.form input,
+.form textarea{
+
+padding:17px 20px;
+border-radius:12px;
+border:1px solid #ddd;
+outline:none;
+font-size:16px;
+font-family:inherit;
+transition:.3s;
+
+}
+
+.form input:focus,
+.form textarea:focus{
+
+border-color:#7c3aed;
+box-shadow:0 0 0 4px rgba(124,58,237,.10);
+
+}
+
+.form textarea{
+
+resize:none;
+
+}
+
+.form button{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+
+padding:17px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#7c3aed,#a855f7);
+
+color:white;
+
+font-size:17px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.form button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 18px 35px rgba(124,58,237,.22);
+
+}
+
+@media(max-width:900px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.info{
+
+order:2;
+
+}
+
+.form{
+
+order:1;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.contact h2{
+
+font-size:2.4rem;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+.form{
+
+padding:25px;
+
+}
+
+.info{
+
+padding:25px;
+
+}
+
+}

@@ -1,0 +1,472 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root {
+
+  /* Backgrounds */
+
+  --bg: #FAF8FF;
+  --bg-secondary: #F3EEFF;
+  --white: #FFFFFF;
+
+  /* Theme */
+
+  --primary: #7C3AED;
+  --primary-dark: #6D28D9;
+  --secondary: #A855F7;
+  --accent: #EC4899;
+
+  /* Text */
+
+  --text: #111827;
+  --text-light: #6B7280;
+
+  /* Border */
+
+  --border: #E9D5FF;
+
+  /* Radius */
+
+  --radius: 22px;
+
+  /* Shadows */
+
+  --shadow-sm: 0 8px 20px rgba(124,58,237,.08);
+  --shadow-md: 0 12px 35px rgba(124,58,237,.12);
+  --shadow-lg: 0 18px 50px rgba(124,58,237,.18);
+
+  /* Transition */
+
+  --transition: .35s ease;
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(
+        180deg,
+        #faf7ff 0%,
+        #f5efff 35%,
+        #ffffff 100%
+    );
+    color:#1f2937;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   COMMON
+========================================== */
+
+section{
+
+    padding:100px 9%;
+}
+
+.container{
+
+    max-width:1250px;
+
+    margin:auto;
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+}
+
+ul{
+
+    list-style:none;
+}
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    border:none;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1{
+
+    font-size:68px;
+
+    font-weight:800;
+
+    color:var(--text);
+
+    line-height:1.1;
+}
+
+h2{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:var(--text);
+}
+
+h3{
+
+    font-size:26px;
+
+    font-weight:700;
+}
+
+h4{
+
+    font-size:20px;
+
+    font-weight:600;
+}
+
+p{
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+/* ==========================================
+   SECTION HEADINGS
+========================================== */
+
+.sectionTitle{
+
+    text-align:center;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.sectionTitle span{
+
+    color:var(--primary);
+}
+
+.sectionSubtitle{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 70px;
+
+    color:var(--text-light);
+
+    font-size:18px;
+}
+
+/* ==========================================
+   COMMON CARD
+========================================== */
+
+.card{
+
+    background:var(--white);
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-lg);
+}
+
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+
+.primaryBtn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:
+    0 10px 30px rgba(124,58,237,.28);
+}
+
+.primaryBtn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 40px rgba(124,58,237,.38);
+}
+
+/* ==========================================
+   SECONDARY BUTTON
+========================================== */
+
+.secondaryBtn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:white;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.secondaryBtn:hover{
+
+    background:var(--primary);
+
+    color:white;
+}
+
+/* ==========================================
+   TAGS
+========================================== */
+
+.tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:#F5F3FF;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+}
+
+.tag:hover{
+
+    transform:translateY(-4px);
+
+    background:var(--primary);
+
+    color:white;
+}
+
+/* ==========================================
+   ICON BOX
+========================================== */
+
+.iconBox{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+    135deg,
+    #F5F3FF,
+    #FFFFFF);
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    box-shadow:var(--shadow-sm);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F3F4F6;
+}
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:var(--secondary);
+
+    color:white;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+section{
+
+padding:80px 7%;
+
+}
+
+h1{
+
+font-size:52px;
+
+}
+
+h2{
+
+font-size:38px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+padding:70px 6%;
+
+}
+
+h1{
+
+font-size:42px;
+
+}
+
+h2{
+
+font-size:34px;
+
+}
+
+.sectionTitle{
+
+font-size:36px;
+
+}
+
+.sectionSubtitle{
+
+font-size:16px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+h1{
+
+font-size:34px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+}
