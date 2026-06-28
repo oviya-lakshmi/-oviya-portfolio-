@@ -9,54 +9,99 @@ import {
   FaPaperPlane,
 } from "react-icons/fa";
 
-function Contact() {
+export default function Contact() {
   return (
     <section id="contact" className={styles.contact}>
 
-      <h2>Let's Connect</h2>
+      {/* Heading */}
 
-      <p className={styles.subtitle}>
-        Looking for internships, collaborations, or exciting opportunities?
-        Feel free to reach out. I'd love to connect with you!
-      </p>
+      <div className={styles.heading}>
+
+        <p>GET IN TOUCH</p>
+
+        <h2>Let's Connect</h2>
+
+        <span>
+          Looking for internships, collaborations or exciting
+          opportunities? Feel free to reach out. I'd love to
+          connect with you and discuss innovative ideas.
+        </span>
+
+      </div>
+
+      {/* Main Layout */}
 
       <div className={styles.container}>
 
-        {/* LEFT CARD */}
+        {/* ================= LEFT ================= */}
 
         <div className={styles.info}>
 
+          <h3>Contact Information</h3>
+
+          <p className={styles.infoText}>
+            Whether you have an opportunity, project idea,
+            or simply want to say hello, I'm always open
+            to meaningful conversations.
+          </p>
+
+          {/* Email */}
+
           <div className={styles.infoCard}>
-            <FaEnvelope className={styles.icon} />
+
+            <div className={styles.icon}>
+              <FaEnvelope />
+            </div>
 
             <div>
+
               <h4>Email</h4>
 
               <a href="mailto:oviyalakshmikumar06@gmail.com">
                 oviyalakshmikumar06@gmail.com
               </a>
+
             </div>
+
           </div>
 
+          {/* Phone */}
+
           <div className={styles.infoCard}>
-            <FaPhoneAlt className={styles.icon} />
+
+            <div className={styles.icon}>
+              <FaPhoneAlt />
+            </div>
 
             <div>
+
               <h4>Phone</h4>
 
               <p>+91 91235 71624</p>
+
             </div>
+
           </div>
 
+          {/* Location */}
+
           <div className={styles.infoCard}>
-            <FaMapMarkerAlt className={styles.icon} />
+
+            <div className={styles.icon}>
+              <FaMapMarkerAlt />
+            </div>
 
             <div>
+
               <h4>Location</h4>
 
               <p>Tamil Nadu, India</p>
+
             </div>
+
           </div>
+
+          {/* Social */}
 
           <div className={styles.socials}>
 
@@ -69,7 +114,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/oviyalakshmi-k/"
+              href="https://www.linkedin.com/in/oviyalakshmi-k"
               target="_blank"
               rel="noreferrer"
             >
@@ -80,7 +125,7 @@ function Contact() {
 
         </div>
 
-        {/* FORM */}
+        {/* ================= FORM ================= */}
 
         <form
           className={styles.form}
@@ -106,19 +151,23 @@ function Contact() {
             value="table"
           />
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
+          <div className={styles.row}>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+          </div>
 
           <input
             type="text"
@@ -129,14 +178,17 @@ function Contact() {
 
           <textarea
             name="message"
-            rows="6"
+            rows="7"
             placeholder="Write your message..."
             required
           ></textarea>
 
           <button type="submit">
+
             <FaPaperPlane />
-            Send Message
+
+            <span>Send Message</span>
+
           </button>
 
         </form>
@@ -146,5 +198,3 @@ function Contact() {
     </section>
   );
 }
-
-export default Contact;

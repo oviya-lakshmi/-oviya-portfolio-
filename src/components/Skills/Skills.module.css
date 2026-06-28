@@ -1,93 +1,328 @@
 .skills{
-    padding:100px 0;
+    padding:110px 0;
 }
 
-.skills h2{
+/* ==========================
+        HEADING
+========================== */
+
+.heading{
     text-align:center;
-    font-size:3rem;
-    margin-bottom:55px;
-    font-weight:800;
+    margin-bottom:60px;
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    background:white;
-    border-radius:30px;
-    padding:45px;
-    box-shadow:0 20px 60px rgba(124,58,237,.08);
-}
-
-.row{
-    display:flex;
-    align-items:center;
-    gap:35px;
-    padding:22px 0;
-    border-bottom:1px solid #ece7ff;
-}
-
-.row:last-child{
-    border-bottom:none;
-}
-
-.heading{
-    width:240px;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    font-size:24px;
+.heading p{
+    color:#7c3aed;
+    font-size:14px;
     font-weight:700;
-    color:#7c3aed;
-    flex-shrink:0;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:10px;
 }
 
-.heading svg{
-    font-size:26px;
+.heading h2{
+    font-size:3rem;
+    color:#1e1b4b;
+    font-weight:800;
+    margin-bottom:15px;
 }
 
-.items{
+.heading span{
+    display:block;
+    max-width:700px;
+    margin:auto;
+    color:#6b7280;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* ==========================
+        CATEGORY GRID
+========================== */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:26px;
+}
+
+/* ==========================
+        CATEGORY CARD
+========================== */
+
+.card{
+    background:#fff;
+    border-radius:24px;
+    padding:28px;
+
+    border:1px solid rgba(124,58,237,.08);
+
+    box-shadow:
+    0 15px 35px rgba(124,58,237,.08);
+
+    transition:.35s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 28px 60px rgba(124,58,237,.15);
+
+}
+
+.cardHeader{
+
     display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
 
-.skill{
-    display:flex;
     align-items:center;
-    gap:8px;
-    padding:10px 20px;
-    border-radius:50px;
-    background:#f8f5ff;
-    border:1px solid #e4d7ff;
-    font-size:16px;
-    font-weight:600;
-    transition:.3s;
+
+    gap:14px;
+
+    margin-bottom:25px;
+
 }
 
-.skill svg{
+.cardHeader svg{
+
+    font-size:24px;
+
     color:#7c3aed;
-    font-size:18px;
+
 }
 
-.skill:hover{
-    background:#7c3aed;
-    color:white;
-    transform:translateY(-4px);
+.cardHeader h3{
+
+    font-size:22px;
+
+    color:#1f2937;
+
+    font-weight:700;
+
 }
 
-.skill:hover svg{
-    color:white;
+/* ==========================
+        SKILL GRID
+========================== */
+
+.skillsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
 }
 
-@media(max-width:900px){
+/* ==========================
+        SKILL CARD
+========================== */
 
-.row{
+.skillCard{
+
+    background:#faf7ff;
+
+    border:1px solid #ece5ff;
+
+    border-radius:18px;
+
+    padding:18px 10px;
+
+    display:flex;
+
     flex-direction:column;
-    align-items:flex-start;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    transition:.3s;
+
+    min-height:110px;
+
 }
 
-.heading{
-    width:100%;
+.skillCard:hover{
+
+    transform:translateY(-5px);
+
+    background:white;
+
+    box-shadow:
+    0 12px 25px rgba(124,58,237,.12);
+
+}
+
+/* ==========================
+        LOGO
+========================== */
+
+.logoBox{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    width:40px;
+
+    height:40px;
+
+    object-fit:contain;
+
+}
+
+/* React Icons */
+
+.logoBox svg{
+
+    font-size:38px;
+
+}
+
+.skillCard span{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    text-align:center;
+
+    line-height:1.3;
+
+}
+
+/* ==========================
+        ICON COLORS
+========================== */
+
+.java{
+    color:#f89820;
+}
+
+.python{
+    color:#3776AB;
+}
+
+.react{
+    color:#61DAFB;
+}
+
+.html{
+    color:#E34F26;
+}
+
+.node{
+    color:#339933;
+}
+
+.sql{
+    color:#2563eb;
+}
+
+.git{
+    color:#F05032;
+}
+
+.excel{
+    color:#217346;
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:1100px){
+
+.skillsGrid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.skills{
+
+padding:80px 0;
+
+}
+
+.heading h2{
+
+font-size:2.5rem;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.skillsGrid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:500px){
+
+.skillsGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.heading h2{
+
+font-size:2.1rem;
+
+}
+
+.card{
+
+padding:22px;
+
+}
+
+.skillCard{
+
+min-height:100px;
+
+}
+
+.logo{
+
+width:34px;
+
+height:34px;
+
+}
+
+.logoBox svg{
+
+font-size:32px;
+
 }
 
 }

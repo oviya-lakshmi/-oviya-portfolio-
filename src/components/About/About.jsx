@@ -7,7 +7,7 @@ import {
   FaLaptopCode,
   FaBrain,
   FaUsers,
-  FaLightbulb
+  FaLightbulb,
 } from "react-icons/fa";
 
 export default function About() {
@@ -16,42 +16,42 @@ export default function About() {
 
       <div className={styles.title}>
         <p>WHO I AM</p>
-        <h2>What I Bring</h2>
+        <h2>About Me</h2>
       </div>
 
       <div className={styles.grid}>
 
-        {/* Large About Card */}
+        {/* LEFT BIG CARD */}
 
-        <div className={`${styles.card} ${styles.large}`}>
+        <div className={`${styles.card} ${styles.aboutCard}`}>
 
           <h3>Hello! 👋 I'm Oviyalakshmi</h3>
 
           <p>
             I'm an Information Technology undergraduate at
-            <strong> Madras Institute of Technology </strong>
-            passionate about building AI-powered solutions,
-            scalable web applications and solving real-world
+            <strong> Madras Institute of Technology</strong>,
+            passionate about building AI-powered applications,
+            scalable web platforms and solving real-world
             problems through technology.
           </p>
 
           <p>
-            I enjoy working with React, Spring Boot,
-            Machine Learning and modern web technologies.
-            My goal is to build software that is both useful
-            and impactful while continuously improving my
-            problem-solving and development skills.
+            My interests span Full Stack Development,
+            Artificial Intelligence, Machine Learning and
+            Software Engineering. I enjoy turning ideas into
+            impactful digital solutions while continuously
+            improving my technical and problem-solving skills.
           </p>
 
           <p>
-            Apart from academics, I actively solve coding
-            challenges on LeetCode, contribute to projects,
-            and enjoy learning emerging technologies.
+            Beyond academics, I actively solve coding
+            challenges on LeetCode, contribute to projects
+            and explore emerging technologies.
           </p>
 
         </div>
 
-        {/* Right Side Cards */}
+        {/* RIGHT SMALL CARDS */}
 
         <div className={styles.card}>
           <FaCode className={styles.icon}/>
@@ -80,7 +80,7 @@ export default function About() {
         <div className={styles.card}>
           <FaGraduationCap className={styles.icon}/>
           <h4>MIT</h4>
-          <span>B.Tech Information Technology</span>
+          <span>IT Student</span>
         </div>
 
         <div className={styles.card}>
@@ -89,10 +89,20 @@ export default function About() {
           <span>Volunteer & Team Member</span>
         </div>
 
-        <div className={styles.card}>
+        {/* WIDE CARD */}
+
+        <div className={`${styles.card} ${styles.wideCard}`}>
+
           <FaLightbulb className={styles.icon}/>
-          <h4>Passionate About</h4>
-          <span>AI • Full Stack • ML • Problem Solving</span>
+
+          <div>
+            <h4>Passionate About</h4>
+            <span>
+              Artificial Intelligence • Machine Learning •
+              Full Stack Development • Problem Solving
+            </span>
+          </div>
+
         </div>
 
       </div>

@@ -1,148 +1,384 @@
 .about{
 
-    padding:120px 0;
+padding:100px 0;
 
 }
 
 .title{
 
-    text-align:center;
+text-align:center;
 
-    margin-bottom:60px;
+margin-bottom:60px;
 
 }
 
 .title p{
 
-    color:var(--primary);
+color:var(--primary);
 
-    letter-spacing:2px;
+font-weight:700;
 
-    font-weight:700;
+letter-spacing:2px;
 
-    text-transform:uppercase;
+text-transform:uppercase;
 
-    margin-bottom:8px;
+margin-bottom:10px;
 
 }
 
 .title h2{
 
-    font-size:44px;
+font-size:3rem;
 
-    color:var(--text);
+font-weight:800;
+
+color:var(--text);
 
 }
 
 .grid{
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:2fr 1fr 1fr;
+grid-template-columns:2fr 1fr 1fr;
 
-    gap:22px;
+grid-template-areas:
+
+"about lc cgpa"
+
+"about ffe projects"
+
+"about mit leader"
+
+"about passion passion";
+
+gap:22px;
+
+align-items:stretch;
 
 }
 
+/* =====================
+COMMON CARD
+===================== */
+
 .card{
 
-    background:white;
+background:white;
 
-    border-radius:22px;
+border-radius:24px;
 
-    padding:26px;
+padding:24px;
 
-    border:1px solid var(--border);
+border:1px solid rgba(124,58,237,.08);
 
-    box-shadow:0 10px 30px rgba(124,58,237,.08);
+box-shadow:0 15px 35px rgba(124,58,237,.08);
 
-    transition:.35s;
+transition:.35s;
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    justify-content:center;
+justify-content:center;
 
 }
 
 .card:hover{
 
-    transform:translateY(-8px);
+transform:translateY(-8px);
 
-    box-shadow:0 18px 40px rgba(124,58,237,.16);
-
-}
-
-.large{
-
-    grid-row:span 4;
-
-    padding:45px;
+box-shadow:0 28px 55px rgba(124,58,237,.16);
 
 }
 
-.large h3{
+/* =====================
+ABOUT CARD
+===================== */
 
-    font-size:34px;
+.aboutCard{
 
-    color:var(--primary);
+grid-area:about;
 
-    margin-bottom:24px;
+padding:42px;
+
+}
+
+.aboutCard h3{
+
+font-size:34px;
+
+color:var(--primary);
+
+margin-bottom:22px;
 
 }
 
-.large p{
+.aboutCard p{
 
-    font-size:17px;
+font-size:17px;
 
-    color:var(--text-light);
+line-height:1.9;
 
-    line-height:1.9;
+color:var(--text-light);
 
-    margin-bottom:18px;
+margin-bottom:18px;
 
 }
+
+/* =====================
+ICON
+===================== */
 
 .icon{
 
-    font-size:34px;
+font-size:30px;
 
-    color:var(--primary);
+color:var(--primary);
 
-    margin-bottom:18px;
+margin-bottom:16px;
 
 }
 
 .card h4{
 
-    font-size:28px;
+font-size:26px;
 
-    margin-bottom:10px;
+font-weight:700;
 
-    color:var(--text);
+margin-bottom:8px;
+
+color:var(--text);
 
 }
 
 .card span{
 
-    color:var(--text-light);
+font-size:15px;
 
-    line-height:1.7;
+line-height:1.7;
+
+color:var(--text-light);
 
 }
 
-@media(max-width:1000px){
+/* =====================
+GRID AREAS
+===================== */
+
+.grid > .card:nth-child(2){
+
+grid-area:lc;
+
+}
+
+.grid > .card:nth-child(3){
+
+grid-area:cgpa;
+
+}
+
+.grid > .card:nth-child(4){
+
+grid-area:ffe;
+
+}
+
+.grid > .card:nth-child(5){
+
+grid-area:projects;
+
+}
+
+.grid > .card:nth-child(6){
+
+grid-area:mit;
+
+}
+
+.grid > .card:nth-child(7){
+
+grid-area:leader;
+
+}
+
+/* =====================
+PASSION CARD
+===================== */
+
+.wideCard{
+
+grid-area:passion;
+
+display:flex;
+
+flex-direction:row;
+
+align-items:center;
+
+gap:18px;
+
+padding:26px 30px;
+
+}
+
+.wideCard .icon{
+
+margin-bottom:0;
+
+font-size:34px;
+
+flex-shrink:0;
+
+}
+
+.wideCard h4{
+
+margin-bottom:8px;
+
+}
+
+/* =====================
+RESPONSIVE
+===================== */
+
+@media(max-width:1100px){
+
+.grid{
+
+grid-template-columns:1fr 1fr;
+
+grid-template-areas:
+
+"about about"
+
+"lc cgpa"
+
+"ffe projects"
+
+"mit leader"
+
+"passion passion";
+
+}
+
+.aboutCard{
+
+padding:36px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.about{
+
+padding:80px 0;
+
+}
+
+.title h2{
+
+font-size:2.4rem;
+
+}
 
 .grid{
 
 grid-template-columns:1fr;
 
+grid-template-areas:
+
+"about"
+
+"lc"
+
+"cgpa"
+
+"ffe"
+
+"projects"
+
+"mit"
+
+"leader"
+
+"passion";
+
 }
 
-.large{
+.aboutCard{
 
-grid-row:auto;
+padding:30px;
+
+}
+
+.aboutCard h3{
+
+font-size:28px;
+
+}
+
+.aboutCard p{
+
+font-size:16px;
+
+}
+
+.wideCard{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:14px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.title h2{
+
+font-size:2rem;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+.aboutCard{
+
+padding:24px;
+
+}
+
+.aboutCard h3{
+
+font-size:24px;
+
+}
+
+.icon{
+
+font-size:28px;
+
+}
+
+.card h4{
+
+font-size:22px;
+
+}
+
+.card span{
+
+font-size:14px;
 
 }
 

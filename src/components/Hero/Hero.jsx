@@ -17,71 +17,85 @@ export default function Hero() {
   return (
     <section id="home" className={styles.hero}>
 
-      {/* LEFT */}
+      {/* ================= LEFT ================= */}
 
-      <div className={styles.left}>
+      <motion.div
+        className={styles.left}
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
 
-        <motion.p
-          className={styles.greeting}
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <p className={styles.greeting}>
           👋 Hi, I'm
-        </motion.p>
+        </p>
 
-        <motion.h1
-          className={styles.name}
-          initial={{ opacity: 0, y: 35 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          OV<span>I</span>YALAKSHMI K
-        </motion.h1>
+        {/* NAME */}
+
+        <h1 className={styles.name}>
+          <span className={styles.primary}>O</span>
+          VIYALAKSHMI
+          <span className={styles.primary}> K</span>
+        </h1>
+
+        {/* TYPING */}
 
         <div className={styles.typingContainer}>
+
           <TypeAnimation
             sequence={[
               "Information Technology Student",
-              2000,
+              2200,
               "Full Stack Developer",
-              2000,
+              2200,
               "AI & Machine Learning Enthusiast",
-              2000,
+              2200,
               "Problem Solver",
-              2000,
+              2200,
             ]}
-            wrapper="span"
             speed={45}
             repeat={Infinity}
             className={styles.typing}
           />
+
         </div>
 
-        <motion.p
-          className={styles.description}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
+        {/* DESCRIPTION */}
+
+        <p className={styles.description}>
+
           Passionate about building AI-powered applications,
           scalable web solutions and intelligent software that
-          solve real-world problems. I enjoy transforming ideas
-          into impactful products while continuously learning
-          emerging technologies.
-        </motion.p>
+          solve real-world problems.
+
+          <br /><br />
+
+          I enjoy transforming innovative ideas into impactful
+          digital products while continuously learning emerging
+          technologies and strengthening my development skills.
+
+        </p>
+
+        {/* HIGHLIGHTS */}
 
         <div className={styles.highlights}>
+
           <span>🚀 220+ LeetCode</span>
+
           <span>🎓 FFE Scholar</span>
+
           <span>📈 8.46 CGPA</span>
+
           <span>💻 5+ Projects</span>
+
         </div>
+
+        {/* BUTTONS */}
 
         <div className={styles.buttons}>
 
           <a
-            href="/resume.pdf"
+            href="/oviyalakshmi_k-IT_resume.pdf"
             download
             className={styles.primaryBtn}
           >
@@ -99,20 +113,24 @@ export default function Hero() {
 
         </div>
 
+        {/* SOCIAL LINKS */}
+
         <div className={styles.socials}>
 
           <a
             href="https://github.com/oviya-lakshmi"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub"
           >
             <FaGithub />
           </a>
 
           <a
-            href="https://www.linkedin.com/in/oviyalakshmi-k"
+            href="https://www.linkedin.com/in/oviyalakshmi-k/"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
           >
             <FaLinkedin />
           </a>
@@ -121,15 +139,16 @@ export default function Hero() {
             href="https://leetcode.com/u/oviyalakshmi/"
             target="_blank"
             rel="noreferrer"
+            aria-label="LeetCode"
           >
             <SiLeetcode />
           </a>
 
         </div>
 
-      </div>
+      </motion.div>
 
-      {/* RIGHT */}
+      {/* ================= RIGHT ================= */}
 
       <motion.div
         className={styles.right}
@@ -138,12 +157,16 @@ export default function Hero() {
         transition={{ duration: .8 }}
       >
 
-        <div className={styles.imageCircle}>
+        <div className={styles.imageWrapper}>
 
-          <img
-            src={profile}
-            alt="Oviyalakshmi"
-          />
+          <div className={styles.imageCircle}>
+
+            <img
+              src={profile}
+              alt="Oviyalakshmi K"
+            />
+
+          </div>
 
         </div>
 

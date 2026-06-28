@@ -1,144 +1,290 @@
 .footer{
 
-    background:#0F172A;
+    margin-top:100px;
 
-    color:white;
+    padding:70px 20px 35px;
 
-    padding:60px 8% 30px;
+    background:linear-gradient(135deg,#faf7ff,#f3ecff);
+
+    text-align:center;
+
+    border-top:1px solid rgba(124,58,237,.08);
 
 }
 
-.top{
+/*==================================
+            LOGO
+==================================*/
+
+.logoContainer{
 
     display:flex;
 
-    justify-content:space-between;
-
-    align-items:center;
+    justify-content:center;
 
     margin-bottom:25px;
 
 }
 
-.top h2{
+.logoBox{
 
-    font-size:34px;
+    width:110px;
+
+    height:110px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+    135deg,
+    #ede9fe,
+    #faf5ff);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+    0 10px 28px rgba(124,58,237,.18),
+    inset 0 0 0 1px rgba(255,255,255,.65);
+
+    transition:.35s;
+
+}
+
+.logoBox:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 38px rgba(124,58,237,.28);
+
+}
+
+.logo{
+
+    width:82px;
+
+    height:82px;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+}
+
+.logoBox:hover .logo{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================
+            TAGLINE
+==================================*/
+
+.tagline{
+
+    max-width:620px;
+
+    margin:0 auto 35px;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/*==================================
+          SOCIAL ICONS
+==================================*/
+
+.socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.socials a{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#7c3aed;
+
+    font-size:22px;
+
+    text-decoration:none;
+
+    box-shadow:0 10px 25px rgba(124,58,237,.08);
+
+    transition:.35s;
+
+}
+
+.socials a:hover{
+
+    background:#7c3aed;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 16px 32px rgba(124,58,237,.22);
+
+}
+
+/*==================================
+            DIVIDER
+==================================*/
+
+.line{
+
+    width:180px;
+
+    height:2px;
+
+    background:linear-gradient(
+    to right,
+    transparent,
+    #a855f7,
+    transparent);
+
+    margin:0 auto 25px;
+
+    border-radius:50px;
+
+}
+
+/*==================================
+            COPYRIGHT
+==================================*/
+
+.copy{
+
+    font-size:15px;
+
+    color:#555;
 
     margin-bottom:10px;
 
 }
 
-.top p{
+/*==================================
+          MADE WITH
+==================================*/
 
-    color:#CBD5E1;
-
-}
-
-.top button{
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#7c3aed;
-
-    color:white;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.top button:hover{
-
-    background:#7c3aed;
-
-    transform:translateY(-5px);
-
-}
-
-.footer hr{
-
-    border:none;
-
-    height:1px;
-
-    background:#334155;
-
-    margin:30px 0;
-
-}
-
-.links{
+.made{
 
     display:flex;
 
     justify-content:center;
-
-    gap:25px;
-
-    margin-bottom:25px;
-
-}
-
-.links a{
-
-    width:50px;
-
-    height:50px;
-
-    display:flex;
 
     align-items:center;
 
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#1E293B;
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:22px;
-
-    transition:.3s;
-
-}
-
-.links a:hover{
-
-    background:#7c3aed;
-
-}
-
-.copy{
-
-    text-align:center;
-
-    color:#94A3B8;
+    gap:8px;
 
     font-size:15px;
 
+    color:#666;
+
 }
+
+.heart{
+
+    color:#a855f7;
+
+    filter:drop-shadow(0 0 6px rgba(168,85,247,.35));
+
+    animation:beat 1.4s infinite;
+
+}
+
+@keyframes beat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/*==================================
+          RESPONSIVE
+==================================*/
 
 @media(max-width:768px){
 
-.top{
+.logoBox{
 
-    flex-direction:column;
+width:90px;
 
-    gap:20px;
+height:90px;
 
-    text-align:center;
+border-radius:20px;
+
+}
+
+.logo{
+
+width:66px;
+
+height:66px;
+
+}
+
+.tagline{
+
+font-size:16px;
+
+}
+
+.socials{
+
+gap:15px;
+
+}
+
+.socials a{
+
+width:46px;
+
+height:46px;
+
+font-size:20px;
 
 }
 

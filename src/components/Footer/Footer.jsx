@@ -1,50 +1,33 @@
 import styles from "./Footer.module.css";
+
 import {
   FaGithub,
   FaLinkedin,
-  FaEnvelope,
-  FaArrowUp,
+  FaHeart,
 } from "react-icons/fa";
 
+import { SiLeetcode } from "react-icons/si";
+
 function Footer() {
-
-  const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <footer className={styles.footer}>
 
-      <div className={styles.top}>
+     <div className={styles.logoContainer}>
+  <div className={styles.logoBox}>
+    <img
+      src="/logo.png"
+      alt="Oviya Lakshmi Logo"
+      className={styles.logo}
+    />
+  </div>
+</div>
 
-        <div>
+      <p className={styles.tagline}>
+        Building AI-powered solutions with creativity,
+        innovation and AI-driven innovation.
+      </p>
 
-          <h2>Oviyalakshmi K</h2>
-
-          <p>
-            Software Developer | AI & Full Stack Enthusiast
-          </p>
-
-        </div>
-
-        <button onClick={scrollTop}>
-          <FaArrowUp />
-        </button>
-
-      </div>
-
-      <hr />
-
-      <div className={styles.links}>
-
-        <a
-          href="mailto:oviyalakshmikumar06@gmail.com"
-        >
-          <FaEnvelope />
-        </a>
+      <div className={styles.socials}>
 
         <a
           href="https://github.com/oviya-lakshmi"
@@ -55,17 +38,31 @@ function Footer() {
         </a>
 
         <a
-          href="https://linkedin.com/in/oviyalakshmi-k"
+          href="https://www.linkedin.com/in/oviyalakshmi-k"
           target="_blank"
           rel="noreferrer"
         >
           <FaLinkedin />
         </a>
 
+        <a
+          href="https://leetcode.com/u/oviyalakshmi/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <SiLeetcode />
+        </a>
+
       </div>
 
+      <div className={styles.line}></div>
+
       <p className={styles.copy}>
-        © {new Date().getFullYear()} Oviyalakshmi K. All Rights Reserved.
+        © {new Date().getFullYear()} Oviya Lakshmi. All Rights Reserved.
+      </p>
+
+      <p className={styles.made}>
+        Made with <FaHeart className={styles.heart} /> using React & Vite
       </p>
 
     </footer>

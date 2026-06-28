@@ -1,51 +1,120 @@
 .projects{
-    padding:110px 0;
+    padding:100px 0;
 }
 
-.projects h2{
+.heading{
+    max-width:760px;
+    margin:0 auto 70px;
     text-align:center;
-    font-size:3.2rem;
+}
+
+.heading h2{
+    font-size:3rem;
     font-weight:800;
-    margin-bottom:70px;
+    color:var(--text);
+    margin-bottom:18px;
+}
+
+.heading p{
+    font-size:17px;
+    line-height:1.8;
+    color:var(--text-light);
 }
 
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-    gap:40px;
+    gap:36px;
+    align-items:stretch;
 }
 
 .card{
-    background:#fff;
-    border-radius:28px;
-    overflow:hidden;
-    box-shadow:0 20px 50px rgba(124,58,237,.10);
-    transition:.4s;
-    border:1px solid rgba(124,58,237,.08);
     display:flex;
     flex-direction:column;
+    background:white;
+    border-radius:28px;
+    overflow:hidden;
+    border:1px solid rgba(124,58,237,.08);
+    box-shadow:0 18px 45px rgba(124,58,237,.08);
+    transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-12px);
-    box-shadow:0 35px 70px rgba(124,58,237,.20);
+    transform:translateY(-10px);
+    box-shadow:0 30px 70px rgba(124,58,237,.18);
 }
 
-.imageContainer{
-    height:220px;
-    overflow:hidden;
-    position:relative;
+/*=========================
+      VS CODE MOCKUP
+=========================*/
+
+.editor{
+    background:#1e1e2f;
+    color:white;
 }
 
-.imageContainer img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
+.editorTop{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 18px;
+    background:#292942;
 }
 
-.card:hover .imageContainer img{
-    transform:scale(1.08);
+.editorTop p{
+    font-size:14px;
+    font-weight:600;
+    color:#ddd;
+}
+
+.dots{
+    display:flex;
+    gap:8px;
+}
+
+.dots span{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+}
+
+.dots span:nth-child(1){
+    background:#ff5f56;
+}
+
+.dots span:nth-child(2){
+    background:#ffbd2e;
+}
+
+.dots span:nth-child(3){
+    background:#27c93f;
+}
+
+.editorBody{
+    padding:22px;
+}
+
+.folder,
+.file{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 0;
+    font-size:15px;
+}
+
+.folder{
+    color:#f4c542;
+    font-weight:700;
+}
+
+.file{
+    color:#cfd4ff;
+}
+
+.folder svg,
+.file svg{
+    font-size:18px;
 }
 
 .content{
@@ -58,18 +127,20 @@
 .header{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    margin-bottom:15px;
+    align-items:flex-start;
+    gap:18px;
+    margin-bottom:16px;
 }
 
 .header h3{
-    font-size:1.5rem;
-    color:#1e1b4b;
+    font-size:24px;
+    line-height:1.3;
+    color:var(--text);
 }
 
 .links{
     display:flex;
-    gap:12px;
+    gap:10px;
 }
 
 .links a{
@@ -78,88 +149,308 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    border-radius:50%;
-    background:#f4edff;
+    background:#f3ecff;
+    border-radius:12px;
     color:#7c3aed;
-    transition:.3s;
     font-size:18px;
+    transition:.35s;
 }
 
 .links a:hover{
     background:#7c3aed;
-    color:#fff;
+    color:white;
     transform:translateY(-3px);
 }
 
 .content p{
+    font-size:16px;
+    line-height:1.8;
     color:#555;
-    line-height:1.7;
     margin-bottom:22px;
 }
+/*=========================
+        TECH STACK
+=========================*/
 
 .tech{
     display:flex;
     flex-wrap:wrap;
     gap:10px;
-    margin-bottom:22px;
+    margin-bottom:24px;
 }
 
 .tech span{
-    background:#f3ecff;
-    color:#7c3aed;
     padding:8px 14px;
+    background:#f4edff;
+    color:#7c3aed;
     border-radius:30px;
-    font-size:14px;
+    font-size:13px;
     font-weight:600;
+    transition:.3s;
 }
+
+.tech span:hover{
+    background:#7c3aed;
+    color:white;
+}
+
+/*=========================
+        FEATURES
+=========================*/
 
 .content ul{
     list-style:none;
-    padding:0;
-    margin:0 0 28px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:28px;
 }
 
 .content li{
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     gap:10px;
-    margin-bottom:12px;
     color:#444;
+    line-height:1.6;
+    font-size:15px;
 }
 
 .content li svg{
+    margin-top:3px;
     color:#7c3aed;
+    flex-shrink:0;
+}
+
+/*=========================
+         FOOTER
+=========================*/
+
+.footer{
+    margin-top:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:14px;
+    color:#666;
+}
+
+.stats span{
+    background:#faf7ff;
+    border:1px solid #ece5ff;
+    border-radius:30px;
+    padding:8px 14px;
+    font-weight:600;
 }
 
 .button{
-    margin-top:auto;
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
     padding:15px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:700;
-    background:linear-gradient(135deg,#7c3aed,#a855f7);
+    border-radius:16px;
+    background:linear-gradient(
+        135deg,
+        #7c3aed,
+        #a855f7
+    );
     color:white;
-    transition:.3s;
+    font-weight:700;
+    transition:.35s;
 }
 
 .button:hover{
-    transform:translateY(-4px);
-    box-shadow:0 15px 30px rgba(124,58,237,.25);
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(124,58,237,.25);
 }
 
-@media(max-width:768px){
+/*=========================
+      LARGE TABLETS
+=========================*/
 
-.projects h2{
-    font-size:2.5rem;
-}
+@media(max-width:992px){
 
 .grid{
     grid-template-columns:1fr;
+    max-width:720px;
+    margin:auto;
 }
 
-.imageContainer{
-    height:190px;
+}
+
+/*=========================
+         TABLETS
+=========================*/
+
+@media(max-width:768px){
+
+.projects{
+    padding:80px 0;
+}
+
+.heading{
+    margin-bottom:50px;
+}
+
+.heading h2{
+    font-size:2.5rem;
+}
+
+.heading p{
+    font-size:16px;
+}
+
+.editorTop{
+    padding:12px 16px;
+}
+
+.editorTop p{
+    font-size:13px;
+}
+
+.editorBody{
+    padding:18px;
+}
+
+.folder,
+.file{
+    font-size:14px;
+}
+
+.content{
+    padding:22px;
+}
+
+.header{
+    flex-direction:column;
+    gap:16px;
+}
+
+.header h3{
+    font-size:21px;
+}
+
+.links{
+    align-self:flex-end;
+}
+
+.links a{
+    width:38px;
+    height:38px;
+    font-size:16px;
+}
+
+.tech span{
+    font-size:12px;
+    padding:7px 12px;
+}
+
+.content li{
+    font-size:14px;
+}
+
+.button{
+    padding:14px;
+}
+
+}
+
+/*=========================
+          MOBILE
+=========================*/
+
+@media(max-width:480px){
+
+.projects{
+    padding:70px 0;
+}
+
+.heading h2{
+    font-size:2.1rem;
+}
+
+.heading p{
+    font-size:15px;
+}
+
+.grid{
+    gap:24px;
+}
+
+.card{
+    border-radius:22px;
+}
+
+.editorTop{
+    padding:10px 14px;
+}
+
+.editorTop p{
+    font-size:12px;
+}
+
+.dots span{
+    width:10px;
+    height:10px;
+}
+
+.editorBody{
+    padding:16px;
+}
+
+.folder,
+.file{
+    font-size:13px;
+    gap:10px;
+}
+
+.content{
+    padding:18px;
+}
+
+.header h3{
+    font-size:19px;
+}
+
+.links{
+    width:100%;
+    justify-content:flex-end;
+}
+
+.tech{
+    gap:8px;
+}
+
+.tech span{
+    font-size:11px;
+    padding:6px 10px;
+}
+
+.content li{
+    font-size:13px;
+}
+
+.stats{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.stats span{
+    width:100%;
+    text-align:center;
+}
+
+.button{
+    width:100%;
+    padding:14px;
+    font-size:15px;
 }
 
 }

@@ -9,32 +9,48 @@ import Certifications from "./components/Certifications/Certifications";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
-
-
-
 function App() {
+  return (
+    <>
+      <Navbar />
 
-    return (
+      <main>
 
-        <>
+        <Hero />
 
-            <Navbar />
+        <div className="container">
+          <About />
+        </div>
 
-            <Hero />
+        <div className="container">
+          <Skills />
+        </div>
 
-            <About />
+        <div className="container">
+          <FeaturedWork />
+        </div>
 
-            <Skills />
-            <FeaturedWork />
-            <Achievements />
-            <Github />
-            <Certifications />
-            <Contact />
-            <Footer />
-        </>
+        <div className="container">
+          <Achievements />
+        </div>
 
-    );
+        <div className="container">
+          <Github />
+        </div>
 
+        <div className="container">
+          <Certifications />
+        </div>
+
+        <div className="container">
+          <Contact />
+        </div>
+
+      </main>
+
+      <Footer />
+    </>
+  );
 }
 
 export default App;

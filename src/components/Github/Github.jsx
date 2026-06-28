@@ -4,66 +4,90 @@ import {
   FaCodeBranch,
   FaLaptopCode,
   FaArrowRight,
+  FaCode,
+  FaFire,
 } from "react-icons/fa";
 
 export default function Github() {
   return (
     <section id="github" className={styles.github}>
 
-      <h2>GitHub</h2>
+      <div className={styles.heading}>
+        <h2>GitHub Journey</h2>
 
-      <div className={styles.card}>
+        <p>
+          Building projects, solving coding challenges and continuously
+          learning modern software development.
+        </p>
+      </div>
 
-        <div className={styles.left}>
+      <div className={styles.grid}>
+
+        {/* Profile */}
+
+        <div className={styles.profileCard}>
 
           <div className={styles.icon}>
             <FaGithub />
           </div>
 
-          <div>
+          <h3>oviya-lakshmi</h3>
 
-            <h3>oviya-lakshmi</h3>
-
-            <p>
-              Passionate about building AI, MERN Stack and
-              Machine Learning applications.
-            </p>
-
-          </div>
+          <p>
+            Passionate about AI, MERN Stack,
+            Machine Learning and Full Stack Development.
+          </p>
 
         </div>
 
-        <div className={styles.stats}>
+        {/* Stats */}
 
-          <div>
+        <div className={styles.statsCard}>
+
+          <div className={styles.stat}>
+            <FaCode />
             <h4>5+</h4>
             <span>Repositories</span>
           </div>
 
-          <div>
+          <div className={styles.stat}>
+            <FaLaptopCode />
             <h4>AI</h4>
             <span>Projects</span>
           </div>
 
-          <div>
+          <div className={styles.stat}>
+            <FaFire />
             <h4>220+</h4>
             <span>LeetCode</span>
           </div>
 
         </div>
 
-        <a
-          href="https://github.com/oviya-lakshmi"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.button}
-        >
-          <FaCodeBranch />
+        {/* Button */}
 
-          View GitHub
+        <div className={styles.actionCard}>
 
-          <FaArrowRight />
-        </a>
+          <FaCodeBranch className={styles.branchIcon}/>
+
+          <h3>Explore My Work</h3>
+
+          <p>
+            Visit my GitHub profile to explore repositories,
+            source code and ongoing projects.
+          </p>
+
+          <a
+            href="https://github.com/oviya-lakshmi"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.button}
+          >
+            View GitHub
+            <FaArrowRight />
+          </a>
+
+        </div>
 
       </div>
 

@@ -1,8 +1,10 @@
+import { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-scroll";
-import { FaFileDownload } from "react-icons/fa";
+import { FaFileDownload, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
     "home",
@@ -10,45 +12,75 @@ export default function Navbar() {
     "skills",
     "projects",
     "achievements",
-    "contact"
+    "contact",
   ];
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className={styles.header}>
 
-      <div className={styles.logo}>
-        <span>O</span>viyalakshmi.K
+      {/* ================= BRAND ================= */}
+
+      <div
+        className={styles.brand}
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          })
+        }
+      >
+        <div className={styles.logoBox}>
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className={styles.logoImg}
+          />
+        </div>
+
+        <div className={styles.brandText}>
+
+          <h2>
+            <span className={styles.purple}>O</span>viyalakshmi{" "}
+            <span className={styles.purple}>K</span>
+          </h2>
+
+          <p>SOFTWARE ENGINEER</p>
+
+        </div>
       </div>
 
-      <nav>
+      {/* ================= DESKTOP MENU ================= */}
 
+      <nav
+        className={`${styles.nav} ${
+          menuOpen ? styles.showMenu : ""
+        }`}
+      >
         <ul className={styles.navLinks}>
-
           {links.map((item) => (
-
             <li key={item}>
-
               <Link
                 to={item}
                 smooth={true}
                 duration={500}
                 spy={true}
-                offset={-70}
+                offset={-80}
                 activeClass={styles.active}
+                onClick={closeMenu}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </Link>
-
             </li>
-
           ))}
-
         </ul>
-
       </nav>
 
+      {/* ================= RESUME BUTTON ================= */}
+
       <a
-        href="/resume.pdf"
+        href="/oviyalakshmi_k-IT_resume.pdf"
         target="_blank"
         rel="noreferrer"
         className={styles.resumeBtn}
@@ -56,6 +88,15 @@ export default function Navbar() {
         <FaFileDownload />
         Resume
       </a>
+
+      {/* ================= MOBILE BUTTON ================= */}
+
+      <button
+        className={styles.menuBtn}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
 
     </header>
   );

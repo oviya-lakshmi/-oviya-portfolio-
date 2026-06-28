@@ -1,95 +1,120 @@
 import styles from "./Skills.module.css";
 
 import {
-  FaJava,
   FaReact,
   FaHtml5,
-  FaGitAlt,
+  FaNodeJs,
   FaPython,
+  FaJava,
+  FaGitAlt,
   FaDatabase,
   FaFileExcel,
+  FaCode,
   FaLaptopCode,
   FaBrain,
   FaTools,
 } from "react-icons/fa";
 
-import {
-  FaCode,
-} from "react-icons/fa6";
+const skillData = [
+  {
+    title: "Programming",
+    icon: <FaCode />,
+    skills: [
+      { name: "C", img: "/logos/c.png" },
+      { name: "C++", img: "/logos/c++.png" },
+      { name: "Java", icon: <FaJava className={styles.java} /> },
+      { name: "Python", icon: <FaPython className={styles.python} /> },
+      { name: "JavaScript", img: "/logos/javascript.png" },
+    ],
+  },
+
+  {
+    title: "Web Development",
+    icon: <FaLaptopCode />,
+    skills: [
+      { name: "React", icon: <FaReact className={styles.react} /> },
+      { name: "HTML5", icon: <FaHtml5 className={styles.html} /> },
+      { name: "CSS3", img: "/logos/css.png" },
+      { name: "Node.js", icon: <FaNodeJs className={styles.node} /> },
+    ],
+  },
+
+  {
+    title: "Database",
+    icon: <FaDatabase />,
+    skills: [
+      { name: "SQL", icon: <FaDatabase className={styles.sql} /> },
+      { name: "MySQL", img: "/logos/mysql.png" },
+      { name: "SQLite", img: "/logos/sqlite.png" },
+    ],
+  },
+
+  {
+    title: "AI / ML",
+    icon: <FaBrain />,
+    skills: [
+      { name: "Scikit-Learn", img: "/logos/sklearn.png" },
+      { name: "NLP", icon: <FaPython className={styles.python} /> },
+    ],
+  },
+
+  {
+    title: "Tools",
+    icon: <FaTools />,
+    skills: [
+      { name: "Git", icon: <FaGitAlt className={styles.git} /> },
+      { name: "VS Code", img: "/logos/vsc.png" },
+      { name: "Excel", icon: <FaFileExcel className={styles.excel} /> },
+    ],
+  },
+];
 
 export default function Skills() {
   return (
     <section id="skills" className={styles.skills}>
 
-      <h2>Technical Skills</h2>
+      <div className={styles.heading}>
+        <p>MY EXPERTISE</p>
+        <h2>Technical Skills</h2>
+        <span>
+          Technologies I use to build scalable web applications,
+          AI solutions and modern software.
+        </span>
+      </div>
 
-      <div className={styles.container}>
+      <div className={styles.grid}>
+        {skillData.map((category) => (
+          <div className={styles.card} key={category.title}>
 
-        <div className={styles.row}>
-          <div className={styles.heading}>
-            <FaCode />
-            <span>Programming</span>
+            <div className={styles.cardHeader}>
+              {category.icon}
+              <h3>{category.title}</h3>
+            </div>
+
+            <div className={styles.skillsGrid}>
+              {category.skills.map((skill) => (
+                <div className={styles.skillCard} key={skill.name}>
+
+                  <div className={styles.logoBox}>
+                    {skill.img ? (
+                      <img
+                        src={skill.img}
+                        alt={skill.name}
+                        className={styles.logo}
+                      />
+                    ) : (
+                      skill.icon
+                    )}
+                  </div>
+
+                  <span>{skill.name}</span>
+
+                </div>
+              ))}
+            </div>
+
           </div>
-
-          <div className={styles.items}>
-            <div className={styles.skill}>C</div>
-            <div className={styles.skill}>C++</div>
-            <div className={styles.skill}><FaJava /> Java</div>
-            <div className={styles.skill}><FaPython /> Python</div>
-            <div className={styles.skill}>JS JavaScript</div>
-          </div>
-        </div>
-
-        <div className={styles.row}>
-          <div className={styles.heading}>
-            <FaLaptopCode />
-            <span>Web Development</span>
-          </div>
-
-          <div className={styles.items}>
-            <div className={styles.skill}><FaReact /> React</div>
-            <div className={styles.skill}><FaHtml5 /> HTML</div>
-            <div className={styles.skill}>CSS</div>
-          </div>
-        </div>
-
-        <div className={styles.row}>
-          <div className={styles.heading}>
-            <FaDatabase />
-            <span>Database</span>
-          </div>
-
-          <div className={styles.items}>
-            <div className={styles.skill}>SQL</div>
-            <div className={styles.skill}>MySQL</div>
-          </div>
-        </div>
-
-        <div className={styles.row}>
-          <div className={styles.heading}>
-            <FaBrain />
-            <span>AI / ML</span>
-          </div>
-
-          <div className={styles.items}>
-            <div className={styles.skill}>Scikit-Learn</div>
-            <div className={styles.skill}>NLP</div>
-          </div>
-        </div>
-
-        <div className={styles.row}>
-          <div className={styles.heading}>
-            <FaTools />
-            <span>Tools</span>
-          </div>
-
-          <div className={styles.items}>
-            <div className={styles.skill}><FaGitAlt /> Git</div>
-            <div className={styles.skill}>VS Code</div>
-            <div className={styles.skill}><FaFileExcel /> Excel</div>
-          </div>
-        </div>
-
+        ))}
       </div>
 
     </section>
