@@ -84,7 +84,7 @@ export default function Hero() {
 
           <span>🎓 FFE Scholar</span>
 
-          <span>📈 8.46 CGPA</span>
+          <span>📈 8.52 CGPA</span>
 
           <span>💻 5+ Projects</span>
 

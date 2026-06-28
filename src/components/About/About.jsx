@@ -61,7 +61,7 @@ export default function About() {
 
         <div className={styles.card}>
           <FaAward className={styles.icon}/>
-          <h4>8.46</h4>
+          <h4>8.52</h4>
           <span>Current CGPA</span>
         </div>
 
